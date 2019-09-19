@@ -14,7 +14,7 @@ class SomeTestDataSource extends DataSource
      **/
     public function getDataSourceName()
     {
-        return t("Some Test Data Source");
+        return t("Test Data Source");
     }
 
     /**
@@ -27,7 +27,7 @@ class SomeTestDataSource extends DataSource
      **/
     public function getDataSourceDescription()
     {
-        return t("Just a test data source");
+        return t("Test data source - get a random number between 1 and 100");
     }
 
     /**
@@ -41,7 +41,7 @@ class SomeTestDataSource extends DataSource
      **/
     public function getDynamicValue()
     {
-        return t("This is your test value");
+        return rand(1, 100);
     }
 
     /**
@@ -56,9 +56,9 @@ class SomeTestDataSource extends DataSource
     public function getDynamicDisplayValue($value)
     {
         if (!empty($value)) {
-            return t("Test value says: %s", $value);
+            return t("Test value - your random number is: %s", $value);
         }
 
-        return t("No test value. How odd!");
+        return t("No test value, no random number. How odd!");
     }
 }
