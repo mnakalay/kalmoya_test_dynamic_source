@@ -56,6 +56,24 @@ class SomeTestDataSource extends DataSource
     public function getDynamicDisplayValue($value)
     {
         if (!empty($value)) {
+            return t("%sTest value - your random number is: %s%s", "<p>", $value, "</p>");
+        }
+
+        return t("%sNo test value, no random number. How odd!%s", "<p>", "</p>");
+    }
+
+    /**
+     * This function is NOT required
+     * Returns a plain text value
+     * This function is called byt the attributes getPlainTextValue() function
+     * It is used in email templates for instance
+     * It should NOT contain any HTML.
+     *
+     * @return string
+     **/
+    public function getDynamicPlainTextValue($value)
+    {
+        if (!empty($value)) {
             return t("Test value - your random number is: %s", $value);
         }
 
