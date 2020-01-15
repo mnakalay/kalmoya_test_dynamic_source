@@ -27,15 +27,18 @@ Your Data Source **must** extend the class `Concrete\Package\KalmoyaHiddenAttrib
 
 That class is an **abstract class that includes 4 public abstract functions**. So your Data Source class **must** include those 4 functions. 
 
-If you look at the example here you will see the **4 required functions along with a description**. They are:
-1. getDataSourceName()
-2. getDataSourceDescription()
-3. getDynamicValue()
-4. getDynamicDisplayValue($value)
+Additionally there is a 5th function which is not required but you can use.
+
+If you look at the example here you will see the **5 functions along with a description**. They are:
+1. getDataSourceName() - required
+2. getDataSourceDescription() - required
+3. getDynamicValue() - required
+4. getDynamicDisplayValue($value) - required
+5. getDynamicPlainTextValue($value) - **NOT** required
 
 **The most important one is** `getDynamicValue()` which is where you give the attribute its value. It can be anything you want (current user, generated code, current page, request value...)
 
-`getDynamicDisplayValue($value)` is the only one which has a parameter. The parameter is the attribute's saved value and **it is required**.
+`getDynamicDisplayValue($value)` and `getDynamicPlainTextValue($value)` both have a parameter. The parameter is the attribute's saved value and **it is required**.
 
 ### Second you have to install your Data Source
 

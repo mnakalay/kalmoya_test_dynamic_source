@@ -8,7 +8,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'kalmoya_test_dynamic_source';
     protected $appVersionRequired = '8.2.1';
-    protected $pkgVersion = '0.9';
+    protected $pkgVersion = '1.0';
 
     /** @var array defines other package dependency */
     protected $packageDependencies = ['kalmoya_hidden_attributes' => true];
